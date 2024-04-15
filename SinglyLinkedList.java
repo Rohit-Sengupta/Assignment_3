@@ -19,12 +19,32 @@ public class SinglyLinkedList {
         head = null;
     }
     
-    /**
-     * Add a node containing the string passed as item at the head position of the Linked List
+  /**
+
+     * Add a node at the head position of the Linked List. 
+
+     * Works with an empty Linked List, contrary to insertNode(), and otherwise has the same functionality as insert node with index parameter equal to one.
+
      * @param item
+
      */
-    public void addToStart(String item) {
-        head = new Node(item, head);
+
+    public void addToStart(Vocab item) {
+
+    	Node addedNode = new Node(item, head, null);
+
+    	
+
+    	if(head != null) {
+
+    		head.previous = addedNode;
+
+    	}
+
+    	
+
+    	head = addedNode;
+
     }
 
     /**
