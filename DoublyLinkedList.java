@@ -68,8 +68,32 @@ public class DoublyLinkedList {
      * Works with an empty Linked List, contrary to insertNode(), and otherwise has the same functionality as insert node with index parameter equal to one.
      * @param item
      */
+    /**
+
+     * Add a node at the head position of the Linked List. 
+
+     * Works with an empty Linked List, contrary to insertNode(), and otherwise has the same functionality as insert node with index parameter equal to one.
+
+     * @param item
+
+     */
+
     public void addToStart(Vocab item) {
-    	head = new Node(item, head, null);
+
+    	Node addedNode = new Node(item, head, null);
+
+    	
+
+    	if(head != null) {
+
+    		head.previous = addedNode;
+
+    	}
+
+    	
+
+    	head = addedNode;
+
     }
 
     /**
