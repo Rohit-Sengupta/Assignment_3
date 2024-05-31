@@ -1,2 +1,3 @@
-# Assignment_3
+# Movie_Database
+
 COMP 249 assignment
